@@ -48,7 +48,10 @@ public class ReportGeneratorService {
 
     public Mono<WeatherReportResponse> generateReportsForAllTickets() {
         return Flux.fromIterable(ticketRepository.findAll())
+                .parallel()
+                .runOn(Schedulers.parallel())
                 .flatMap(this::generateReport)
+                .sequential()
                 .collectList()
                 .map(reports -> WeatherReportResponse.builder()
                         .reports(reports)
