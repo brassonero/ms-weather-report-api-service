@@ -1,4 +1,4 @@
-package com.dealengine.weatherreport.model;
+package com.dealengine.weatherreport.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -19,8 +19,8 @@ Este proyecto es una aplicación Spring Boot que genera reportes meteorológicos
 ### Requisitos Previos
 
 - Java 1.8 o superior
-- Maven o Gradle
-- PostgreSQL (o cualquier otra base de datos relacional compatible con JPA)
+- Maven
+- H2 (en desarrollo)
 
 ### Ejecutar la Aplicación
 

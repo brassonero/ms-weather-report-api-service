@@ -1,4 +1,4 @@
-package com.dealengine.weatherreport.model;
+package com.dealengine.weatherreport.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
