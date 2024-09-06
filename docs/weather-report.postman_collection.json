@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "9e74a047-eea3-43f2-8444-e06894e3d030",
+		"name": "weather-report",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19283099"
+	},
+	"item": [
+		{
+			"name": "[local] weather-report-api-service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/generate-report",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"generate-report"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
