@@ -9,6 +9,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 import java.util.Collections;
+
 @Slf4j
 @Configuration
 public class CorsConfig {
@@ -18,11 +19,12 @@ public class CorsConfig {
 		log.info("Loading CorsFilter ---->");
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		CorsConfiguration config = new CorsConfiguration();
+
 		config.setAllowCredentials(true);
-		config.setAllowedOrigins(Collections.singletonList("*"));
+		config.setAllowedOrigins(Collections.singletonList("http://localhost:3000"));
 		config.setAllowedHeaders(Collections.singletonList("*"));
 		config.setAllowedMethods(Collections.singletonList("*"));
-		config.setAllowedOriginPatterns(Collections.singletonList("*"));
+
 		source.registerCorsConfiguration("/**", config);
 		FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<>(new CorsFilter(source));
 		bean.setOrder(0);
